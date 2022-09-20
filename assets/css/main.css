@@ -1,0 +1,23 @@
+
+:root {
+    --column-gutter: 24px;
+    --columns: 3;
+    --row-gutter: 24px;
+}
+
+.grid_image {
+    grid-column-gap: var(--column-gutter);
+    align-items: start;
+    display: grid;
+    grid-template-columns: repeat(var(--columns),minmax(0,1fr));
+}
+
+.grid_child {
+    display: grid;
+    grid-template-columns: minmax(0,1fr);
+    row-gap: var(--row-gutter);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}

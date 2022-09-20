@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unsplash API Search</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="flex justify-center items-center w-full h-[300px] bg-[url(./assets/img/bg.jpg)] bg-cover bg-center">
+    <form id="image_search"
+      class="flex justify-center items-center gap-4 px-2 max-w-screen-md w-full h-[50px] mx-auto bg-slate-50 rounded-md">
+      <input autocomplete="off" name="search" id="search" required
+        class="h-full w-full p-2 text-sm outline-none bg-slate-50" type="text" placeholder="Digite o nome da imagem">
+      <button id="submitQuery" class="w-auto" type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#ccc" width="20" height="20" viewBox="0 0 512 512">
+          <path
+            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z" />
+          </svg>
+      </button>
+    </form>
+  </div>
+
+  <div class="max-w-screen-xl p-4 mx-auto my-4 grid_image">
+    <div id="images_results" class="grid_child"></div>
+  </div>
+
+  <script type="module" src="./assets/js/main.js"></script>
+</body>
+
+</html>
